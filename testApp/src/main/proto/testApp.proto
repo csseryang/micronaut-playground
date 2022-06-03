@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "testApp";
+option java_outer_classname = "TestApp";
+option objc_class_prefix = "HLW";
+
+package testApp;
+
+service TestAppService {
+  rpc send (TestAppRequest) returns (TestAppReply) {}
+}
+
+message TestAppRequest {
+  string name = 1;
+}
+
+message TestAppReply {
+  string message = 1;
+}
